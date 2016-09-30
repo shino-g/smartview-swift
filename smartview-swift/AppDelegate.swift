@@ -1,21 +1,20 @@
-//
-//  AppDelegate.swift
-//  smartview-swift
-//
-//  Created by ND-00316 on 2016/07/13.
-//  Copyright © 2016年 shino-g. All rights reserved.
-//
-
 import UIKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
-
+    
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        
+        self.window = UIWindow( frame: UIScreen.mainScreen().bounds )
+        
+        let mainView = MainViewController()
+        mainView.view.backgroundColor = UIColor.whiteColor()
+        
+        self.window!.rootViewController   = mainView
+        self.window!.makeKeyAndVisible()
         return true
     }
 
